@@ -1,4 +1,5 @@
-import "./App.css";
+import Container from "./components/UI/Container";
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 const App = () => {
   const rawList = [
     {
@@ -157,6 +158,11 @@ const App = () => {
     pack.id = Math.random() * 10 + 1;
     return pack;
   });
+  return (
+    <Container>
+      <WelcomePage />
+    </Container>
+  );
 };
 
 export default App;

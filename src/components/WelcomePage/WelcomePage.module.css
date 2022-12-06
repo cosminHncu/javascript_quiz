@@ -1,0 +1,40 @@
+.welcome{
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  padding-top: 1.5rem;
+  width: 150px;
+  height: 150px;
+}
+.showcase{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 40vh;
+  padding: 1.8rem;
+}
+.info{
+  text-align: start;
+  padding: 1.8rem;
+  width: 750px;
+}
+.header{
+  font-size: 90px;
+  color: #333;
+  margin: 0;
+}
+.text{
+  font-size: 1.3rem;
+  color: #333;
+  letter-spacing: 0.8px;
+}
+/* shame */
+.h_text{
+  font-size: 1.3rem;
+  color: #333;
+  letter-spacing: 0.8px;
+  padding: 1rem;
+  border-bottom: 3px solid #f2f2f2f2;
+  width: 390px;
+}
