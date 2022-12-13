@@ -38,16 +38,16 @@
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
-  height: 300px;
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
 .item{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #333;
   outline: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 25px;
+  
 }
 .item:hover{
   background: #f0db4f;
@@ -61,15 +61,17 @@
   border-radius: 15px;
   box-shadow: 10px 10px 5px #aaaaaa;
   background-color: #f4f4f4;
+  min-width: 500px;
 }
 .quiz{
-  width: 490px;
-  height: 490px;
+  max-width: 490px;
+  max-height: 490px;  
 }
 .showcase{
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  width: 100%;
 }

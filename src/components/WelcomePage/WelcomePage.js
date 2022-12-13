@@ -1,7 +1,6 @@
 import classes from "./WelcomePage.module.css";
 import logo from "../JavaScript-logo.png";
 import React, { useState } from "react";
-
 const WelcomePage = (props) => {
   const [readyPlay, setReadyPlay] = useState(false);
   const handelStartQuiz = () => {
