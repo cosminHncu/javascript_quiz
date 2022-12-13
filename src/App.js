@@ -9,6 +9,11 @@ const App = () => {
   const [finshQuiz, setFinishQuiz] = useState(false);
   const rawList = [
     {
+      question: `Which of the following is not a property of the window object?`,
+      correctAnswer: `menu`,
+      answers: [`history`, `navigator`, `document`, `menu`],
+    },
+    {
       question: `Inside which HTML element do we put the JavaScript?`,
       correctAnswer: `<script>`,
       answers: [`<js>`, `<javascript>`, `<script>`, `<scripting>`],
