@@ -1,6 +1,10 @@
-import Container from "./components/UI/Container";
+import Container from "./components/UI/Container/Container";
+import classes from "./App.module.css";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
+import Quiz from "./components/Quiz/Quiz";
+import React, { useState } from "react";
 const App = () => {
+  const [startQuiz, setStartQuiz] = useState(false);
   const rawList = [
     {
       question: `Inside which HTML element do we put the JavaScript?`,
@@ -80,7 +84,7 @@ const App = () => {
       answers: [`if (i != 5)`, `if (i <> 5)`, `if i =! 5 then`, `if i <> 5`],
     },
     {
-      question: `How does a WHILE loop start?`,
+      question: `How does a FOR loop start?`,
       correctAnswer: `for (i = 0; i <= 5; i++)`,
       answers: [
         `for (i = 0; i <= 5; i++)`,
@@ -154,13 +158,21 @@ const App = () => {
       answers: [`True`, `False`],
     },
   ];
+  const startQ = (status) => {
+    setStartQuiz(true);
+  };
+
   const list = rawList.map((pack) => {
     pack.id = Math.random() * 10 + 1;
     return pack;
   });
   return (
     <Container>
-      <WelcomePage />
+      {startQuiz === true ? (
+        <Quiz list={rawList}></Quiz>
+      ) : (
+        <WelcomePage onSaveStartQ={startQ} />
+      )}
     </Container>
   );
 };

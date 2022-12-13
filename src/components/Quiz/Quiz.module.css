@@ -1,0 +1,75 @@
+.wrapper{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  gap: 2.5rem;
+}
+.counter{
+  font-size: 2rem;
+}
+.header{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  background-color: #f4f4f4;
+}
+.capial_h1{
+  font-size: 5rem;
+}
+.h1{
+  padding: 0.5rem;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  height: 300px;
+  padding: 0.5rem;
+}
+.item{
+  font-size: 1.8rem;
+  color: #333;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 25px;
+}
+.item:hover{
+  background: #f0db4f;
+  transition: all 0.1s ease-in-out;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  background-color: #f4f4f4;
+}
+.quiz{
+  width: 490px;
+  height: 490px;
+}
+.showcase{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
