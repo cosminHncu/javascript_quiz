@@ -6,6 +6,11 @@ Overall, the Javascript quiz project is a fun and engaging way to test and impro
 
 More functionalities to implement.
 
+The UI is designed by me.
+
+Stack:
+- React;
+
 link: https://cosminhncu.github.io/javascript_quiz/
 
 The questions and answers are imported from :
@@ -14,7 +19,9 @@ The questions and answers are imported from :
 - https://ydkjs-exercises.com/this-object-prototypes;
 - a few are created by me;
 
-The stack I used in this project is React and the UI is designed by me
+Overview:
+
+
 ![Screenshot (10)](https://user-images.githubusercontent.com/101092190/207652986-8bce53f1-8bc9-430c-9e35-e3b10482f03d.png)
 
 
