@@ -1,12 +1,10 @@
 import Container from "./components/UI/Container/Container";
-import classes from "./App.module.css";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import Quiz from "./components/Quiz/Quiz";
-import FinalPage from "./components/FinalPage/FinalPage";
+
 import React, { useState } from "react";
 const App = () => {
   const [startQuiz, setStartQuiz] = useState(false);
-  const [finshQuiz, setFinishQuiz] = useState(false);
   const rawList = [
     {
       question: `Is JavaScript case-sensitive?`,
@@ -232,7 +230,7 @@ const App = () => {
     },
   ];
   const startQ = (status) => setStartQuiz(true);
-  const finishQ = (status) => setFinishQuiz(true);
+
   //const list = rawList.map((pack) => {
   //  pack.id = Math.random() * 10 + 1;
   //  return pack;

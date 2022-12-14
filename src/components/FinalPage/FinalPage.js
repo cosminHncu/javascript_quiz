@@ -12,14 +12,13 @@ const Number = ({ n }) => {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 };
 
-const FinalPage = ({ results }) => {
-  console.log(results);
+const FinalPage = ({ results, onRestart }) => {
   const finalResults = results.filter((set) => set[0] === set[1]);
-
   const perc = Math.round((finalResults.length / results.length) * 100);
   const message = `You ${
-    perc <= 80 ? `can learn more Javascript!` : `can be proud of yourself!`
+    perc <= 80 ? `should learn more Javascript!` : `can be proud of yourself!`
   }`;
+
   return (
     <div className={classes.wrapper}>
       <h2 className={classes.final_header}>{message}</h2>
@@ -27,11 +26,9 @@ const FinalPage = ({ results }) => {
         <h2
           className={classes.final_text}
         >{`You scored ${finalResults.length} out of ${results.length}`}</h2>
-        <div>
-          <h2 className={classes.percentage}>
-            <Number n={perc} />%
-          </h2>
-        </div>
+        <h2 className={classes.percentage}>
+          <Number n={perc} />%
+        </h2>
       </div>
       <img alt="final" className={classes.final} src={final} />
     </div>
@@ -39,8 +36,3 @@ const FinalPage = ({ results }) => {
 };
 
 export default FinalPage;
-
-//  <h1>{`${final.length}/${results.length}`}</h1>
-{
-  /*<h2 className={classes.percentage}>{`${perc}%`}</h2>*/
-}

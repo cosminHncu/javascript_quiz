@@ -10,7 +10,7 @@ const Quiz = ({ list }) => {
   const [saveAnswer, setSaveAnswer] = useState(null);
   const [results, setResults] = useState([]);
   const [quizDone, setQuizDone] = useState(false);
-  list = list.sort((a, b) => 0.5 - Math.random());
+
   const handelButton = (e) => {
     let counter = selectedQuestion + 1;
     setSelectedQuestion(counter);
@@ -41,23 +41,21 @@ const Quiz = ({ list }) => {
           <div className={classes.card}>
             <h2 className={classes.h1}>{list[selectedQuestion].question}</h2>
             <ul className={classes.list}>
-              {list[selectedQuestion].answers
-                .sort((a, b) => 0.5 - Math.random())
-                .map((item) => {
-                  const itemObj = {
-                    answer: item,
-                    id: Math.random() * 10,
-                  };
-                  return (
-                    <button
-                      className={classes.item}
-                      key={itemObj.id}
-                      onClick={handelButton}
-                    >
-                      {itemObj.answer}
-                    </button>
-                  );
-                })}
+              {list[selectedQuestion].answers.map((item) => {
+                const itemObj = {
+                  answer: item,
+                  id: Math.random() * 10,
+                };
+                return (
+                  <button
+                    className={classes.item}
+                    key={itemObj.id}
+                    onClick={handelButton}
+                  >
+                    {itemObj.answer}
+                  </button>
+                );
+              })}
             </ul>
           </div>
           <img alt="quiz" className={classes.quiz} src={quiz}></img>
