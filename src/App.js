@@ -9,9 +9,19 @@ const App = () => {
   const [finshQuiz, setFinishQuiz] = useState(false);
   const rawList = [
     {
+      question: `Is JavaScript case-sensitive?`,
+      correctAnswer: `True`,
+      answers: [`True`, `False`],
+    },
+    {
       question: `Which of the following is not a property of the window object?`,
       correctAnswer: `menu`,
       answers: [`history`, `navigator`, `document`, `menu`],
+    },
+    {
+      question: `Which of the following do you use for a multi-way branch?`,
+      correctAnswer: `switch`,
+      answers: [`for`, `while`, `switch`, `do while`],
     },
     {
       question: `Inside which HTML element do we put the JavaScript?`,
@@ -39,12 +49,12 @@ const App = () => {
       ],
     },
     {
-      question: `What is the correct syntax for referring to an external script called "xxx.js"?`,
-      correctAnswer: `<script src="xxx.js">`,
+      question: `What is the correct syntax for referring to an external script called "ikj.js"?`,
+      correctAnswer: `<script src="ikj.js">`,
       answers: [
-        `<script name="xxx.js">`,
-        `<script src="xxx.js">`,
-        `<script href="xxx.js">`,
+        `<script name="ikj.js">`,
+        `<script src="ikj.js">`,
+        `<script href="ikj.js">`,
       ],
     },
     {
@@ -64,40 +74,45 @@ const App = () => {
     },
     {
       question: `How do you create a function in JavaScript?`,
-      correctAnswer: `function myFunction()`,
+      correctAnswer: `function aFunction()`,
       answers: [
-        `function:myFunction()`,
-        `function myFunction()`,
-        `function = myFunction()`,
+        `function:aFunction()`,
+        `function aFunction()`,
+        `function = aFunction()`,
       ],
     },
     {
-      question: `How do you call a function named "myFunction"?`,
-      correctAnswer: `myFunction()`,
+      question: `How do you call a function named "anotherFunction"?`,
+      correctAnswer: `anotherFunction()`,
       answers: [
-        `myFunction()`,
-        `call myFunction()`,
-        `call function myFunction()`,
+        `anotherFunction()`,
+        `call anotherFunction()`,
+        `call function anotherFunction()`,
       ],
     },
     {
-      question: `How to write an IF statement in JavaScript?`,
-      correctAnswer: `if (i == 5)`,
-      answers: [`if i = 5 then`, `if i = 5`, `if i == 5 then`, `if (i == 5)`],
+      question: `What will be the output of  [2, 5, 6].reduce((a, b) => (a += b))`,
+      correctAnswer: `13`,
+      answers: [`256`, `14`, `13`, `undefined`],
     },
     {
-      question: `How to write an IF statement for executing some code if "i" is NOT equal to 5?`,
-      correctAnswer: `if (i != 5)`,
-      answers: [`if (i != 5)`, `if (i <> 5)`, `if i =! 5 then`, `if i <> 5`],
+      question: `How to write an IF statement for executing some code if "i" is NOT equal to 12?`,
+      correctAnswer: `if (i != 12)`,
+      answers: [
+        `if (i != 12)`,
+        `if (i <> 12)`,
+        `if i =! 12 then`,
+        `if i <> 12`,
+      ],
     },
     {
       question: `How does a FOR loop start?`,
-      correctAnswer: `for (i = 0; i <= 5; i++)`,
+      correctAnswer: `for (i = 0; i <= 100; i++)`,
       answers: [
-        `for (i = 0; i <= 5)`,
-        `for (i = 0; i <= 5; i++)`,
-        `for i = 1 to 5`,
-        `for (i <= 5; i++)`,
+        `for (i = 0; i <= 100)`,
+        `for (i = 0; i <= 100; i++)`,
+        `for i = 1 to 100`,
+        `for (i <= 100; i++)`,
       ],
     },
     {
@@ -132,6 +147,11 @@ const App = () => {
       ],
     },
     {
+      question: `Which operator is used to assign a value to a variable?`,
+      correctAnswer: `=`,
+      answers: [`=`, `x`, `*`, `==`],
+    },
+    {
       question: `How do you round the number 7.25, to the nearest integer?`,
       correctAnswer: `Math.round(7.25)`,
       answers: [
@@ -150,8 +170,8 @@ const App = () => {
       question: `What is the correct JavaScript syntax for opening a new window called "w2" ?`,
       correctAnswer: `w2 = window.open("http://www.w3schools.com");`,
       answers: [
-        `w2 = window.new("http://www.w3schools.com");`,
-        `w2 = window.open("http://www.w3schools.com");`,
+        `w2 = window.new("http://www.iKnowJS.com");`,
+        `w2 = window.open("http://www.iKnowJS.com");`,
       ],
     },
     {
@@ -160,17 +180,63 @@ const App = () => {
       answers: [`navigator.appName`, `client.navName`, `browser.name`],
     },
     {
-      question: `Is JavaScript case-sensitive?`,
-      correctAnswer: `True`,
-      answers: [`True`, `False`],
+      question: `Which event occurs when the user clicks on an HTML element?`,
+      correctAnswer: `onclick`,
+      answers: [`onchange`, `onpress`, `onclick`, `onmouseclick`],
+    },
+    {
+      question: `Which of the following correctly describe the relationship of JavaScript and "objects"?`,
+      correctAnswer: `Javascript is Object-based`,
+      answers: [
+        `Javascript is Object-oriented`,
+        `Javascript is Object-driven`,
+        `Javascript is Object-based`,
+        `Javascript has no relationship with objects`,
+      ],
+    },
+    {
+      question: `What is the responsibility of a JavaScript engine?`,
+      correctAnswer: `Start-to-finish compilation and execution of our JavaScript program`,
+      answers: [
+        `Writing JavaScript code that is missing from the file`,
+        `Start-to-finish compilation and execution of our JavaScript program`,
+        `Handling all the dirty work of parsing and code-generation`,
+        `Find all unused code and remove it before code generation`,
+      ],
+    },
+
+    {
+      question: `console.log(typeof typeof 1) wil output : `,
+      correctAnswer: `string`,
+      answers: [`number`, `true`, `string`, `1`],
+    },
+    {
+      question: `What is going on under the hood when importing modules to prevent collisions?`,
+      correctAnswer: `They are each wrapped in an IIFE`,
+      answers: [
+        `ES6`,
+        `The code is injected and inserted as is`,
+        `They use global namespaces`,
+        `They are each wrapped in an IIFE`,
+      ],
+    },
+    {
+      question: `What is closure?`,
+      correctAnswer:
+        "The ability of a function to access its lexical scope when that function is executing outside its lexical scope.",
+      answers: [
+        `When a function is nested within another function`,
+        `When a function returns another function, it is said to have a closure over the second function`,
+        `The ability of a function to access its lexical scope when that function is executing outside its lexical scope.`,
+      ],
     },
   ];
   const startQ = (status) => setStartQuiz(true);
   const finishQ = (status) => setFinishQuiz(true);
-  const list = rawList.map((pack) => {
-    pack.id = Math.random() * 10 + 1;
-    return pack;
-  });
+  //const list = rawList.map((pack) => {
+  //  pack.id = Math.random() * 10 + 1;
+  //  return pack;
+  //});
   return (
     <Container>
       {startQuiz === true ? (

@@ -35,6 +35,8 @@
   font-size: 5.5rem;
   color: #333;
   color: #f0db4f;
+  display: flex;
+  width: 200px;
 }
 .js_color{
   color: #f0db4f;

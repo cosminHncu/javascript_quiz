@@ -5,12 +5,12 @@ import quiz from "../quiz.svg";
 import FinalPage from "../FinalPage/FinalPage";
 import Container from "../UI/Container/Container";
 
-const Quiz = (props) => {
-  const list = props.list;
+const Quiz = ({ list }) => {
   const [selectedQuestion, setSelectedQuestion] = useState(0);
   const [saveAnswer, setSaveAnswer] = useState(null);
   const [results, setResults] = useState([]);
   const [quizDone, setQuizDone] = useState(false);
+  list = list.sort((a, b) => 0.5 - Math.random());
   const handelButton = (e) => {
     let counter = selectedQuestion + 1;
     setSelectedQuestion(counter);
@@ -26,24 +26,24 @@ const Quiz = (props) => {
     }
   };
 
-  return (
-    <Container>
-      {quizDone ? (
-        <FinalPage results={results}></FinalPage>
-      ) : (
-        <div className={classes.wrapper}>
-          <div className={classes.header}>
-            <h2 className={classes.capial_h1}>Quiz Time</h2>
-            <h2 className={classes.counter}>{`${selectedQuestion + 1}/${
-              list.length
-            }`}</h2>
-            <img alt="logo" className={classes.logo} src={logo}></img>
-          </div>
-          <div className={classes.showcase}>
-            <div className={classes.card}>
-              <h2 className={classes.h1}>{list[selectedQuestion].question}</h2>
-              <ul className={classes.list}>
-                {list[selectedQuestion].answers.map((item) => {
+  const renderContent = () => {
+    if (quizDone) return <FinalPage results={results} />;
+    return (
+      <div className={classes.wrapper}>
+        <div className={classes.header}>
+          <h2 className={classes.capial_h1}>Quiz Time</h2>
+          <h2 className={classes.counter}>{`${selectedQuestion + 1}/${
+            list.length
+          }`}</h2>
+          <img alt="logo" className={classes.logo} src={logo}></img>
+        </div>
+        <div className={classes.showcase}>
+          <div className={classes.card}>
+            <h2 className={classes.h1}>{list[selectedQuestion].question}</h2>
+            <ul className={classes.list}>
+              {list[selectedQuestion].answers
+                .sort((a, b) => 0.5 - Math.random())
+                .map((item) => {
                   const itemObj = {
                     answer: item,
                     id: Math.random() * 10,
@@ -58,14 +58,15 @@ const Quiz = (props) => {
                     </button>
                   );
                 })}
-              </ul>
-            </div>
-            <img alt="quiz" className={classes.quiz} src={quiz}></img>
+            </ul>
           </div>
+          <img alt="quiz" className={classes.quiz} src={quiz}></img>
         </div>
-      )}
-    </Container>
-  );
+      </div>
+    );
+  };
+
+  return <Container>{renderContent()}</Container>;
 };
 
 export default Quiz;
