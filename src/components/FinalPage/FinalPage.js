@@ -19,6 +19,8 @@ const FinalPage = ({ results, onRestart }) => {
     perc <= 80 ? `should learn more Javascript!` : `can be proud of yourself!`
   }`;
 
+  const handleRestart = () => onRestart();
+
   return (
     <div className={classes.wrapper}>
       <h2 className={classes.final_header}>{message}</h2>
@@ -30,6 +32,9 @@ const FinalPage = ({ results, onRestart }) => {
           <Number n={perc} />%
         </h2>
       </div>
+      <button className={classes.restart} onClick={handleRestart}>
+        restart
+      </button>
       <img alt="final" className={classes.final} src={final} />
     </div>
   );
