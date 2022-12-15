@@ -1,12 +1,27 @@
-A little Javascript Quiz created by using React (also th first project in React). 
+The Javascript Quiz project is a fun and educational tool that uses React to create a dynamic and interactive quiz experience. This project was built as a first project using React, and is designed to test users' knowledge of Javascript concepts and syntax.
+
+The quiz project features a series of multiple choice questions, each with two to four possible answers. At the end of the quiz, the app displays the user's final score.
+
+Overall, the Javascript quiz project is a fun and engaging way to test and improve your knowledge of Javascript. Whether you're a beginner looking to learn more about the language, or a seasoned developer looking for a fun challenge, this quiz has something for everyone.
+
+More functionalities to implement.
+
+The UI is designed by me.
+
+Stack:
+- React;
+
+link: https://cosminhncu.github.io/javascript_quiz/
 
 The questions and answers are imported from :
--https://www.w3schools.com/js/js_quiz.asp;
--https://www.javatpoint.com/javascript-quiz;
--https://ydkjs-exercises.com/this-object-prototypes;
--a few are created by me;
+- https://www.w3schools.com/js/js_quiz.asp;
+- https://www.javatpoint.com/javascript-quiz;
+- https://ydkjs-exercises.com/this-object-prototypes;
+- a few are created by me;
 
-The stack I used in this project is React and the UI is designed by me
+Overview:
+
+
 ![Screenshot (10)](https://user-images.githubusercontent.com/101092190/207652986-8bce53f1-8bc9-430c-9e35-e3b10482f03d.png)
 
 
