@@ -26,45 +26,48 @@ const Quiz = ({ list }) => {
     }
   };
 
-  const renderContent = () => {
-    if (quizDone) return <FinalPage results={results} />;
-    return (
-      <div className={classes.wrapper}>
-        <div className={classes.header}>
-          <h2 className={classes.capial_h1}>Quiz Time</h2>
-          <h2 className={classes.counter}>{`${selectedQuestion + 1}/${
-            list.length
-          }`}</h2>
-          <img alt="logo" className={classes.logo} src={logo}></img>
-        </div>
-        <div className={classes.showcase}>
-          <div className={classes.card}>
-            <h2 className={classes.h1}>{list[selectedQuestion].question}</h2>
-            <ul className={classes.list}>
-              {list[selectedQuestion].answers.map((item) => {
-                const itemObj = {
-                  answer: item,
-                  id: Math.random() * 10,
-                };
-                return (
-                  <button
-                    className={classes.item}
-                    key={itemObj.id}
-                    onClick={handelButton}
-                  >
-                    {itemObj.answer}
-                  </button>
-                );
-              })}
-            </ul>
+  return (
+    <>
+      {quizDone ? (
+        <FinalPage results={results} />
+      ) : (
+        <div className={classes.wrapper}>
+          <div className={classes.header}>
+            <h2 className={classes.header_text}>Quiz Time</h2>
+            <h2 className={classes.counter}>{`${selectedQuestion + 1}/${
+              list.length
+            }`}</h2>
+            <img alt="logo" className={classes.logo} src={logo}></img>
           </div>
-          <img alt="quiz" className={classes.quiz} src={quiz}></img>
+          <div className={classes.showcase}>
+            <div className={classes.card}>
+              <h2 className={classes.question}>
+                {list[selectedQuestion].question}
+              </h2>
+              <ul className={classes.list}>
+                {list[selectedQuestion].answers.map((item) => {
+                  const itemObj = {
+                    answer: item,
+                    id: Math.random() * 10,
+                  };
+                  return (
+                    <button
+                      className={classes.item}
+                      key={itemObj.id}
+                      onClick={handelButton}
+                    >
+                      {itemObj.answer}
+                    </button>
+                  );
+                })}
+              </ul>
+            </div>
+            <img alt="quiz" className={classes.quiz} src={quiz}></img>
+          </div>
         </div>
-      </div>
-    );
-  };
-
-  return <Container>{renderContent()}</Container>;
+      )}
+    </>
+  );
 };
 
 export default Quiz;

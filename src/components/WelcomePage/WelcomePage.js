@@ -15,7 +15,7 @@ const WelcomePage = (props) => {
           <img alt="logo" className={classes.logo} src={logo}></img>
         </div>
         <div className={classes.info}>
-          <div>
+          <div className={classes.info_wrapper}>
             <h3 className={classes.h_text}>
               Well... you have a chance to prove it!{" "}
             </h3>

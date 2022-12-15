@@ -27,7 +27,7 @@ const App = () => {
       answers: [`<js>`, `<javascript>`, `<script>`, `<scripting>`],
     },
     {
-      question: `What is the correct JavaScript syntax to change the content of the HTML element below?/n
+      question: `What is the correct JavaScript syntax to change the content of the HTML element below?
                   <p id="demo">This is a demonstration.</p>`,
       correctAnswer: `document.getElementById("demo").innerHTML = "Hello World!";`,
       answers: [

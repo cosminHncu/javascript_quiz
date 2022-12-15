@@ -21,10 +21,10 @@
   box-shadow: 10px 10px 5px #aaaaaa;
   background-color: #f4f4f4;
 }
-.capial_h1{
+.header_text{
   font-size: 5rem;
 }
-.h1{
+.question{
   padding: 1rem;
 }
 .logo{
@@ -47,6 +47,7 @@
   border: none;
   padding: 0.8rem;
   border-radius: 25px;
+  cursor: pointer;
   
 }
 .item:hover{
@@ -74,4 +75,60 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
+}
+@media (max-width: 480px){
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem;
+  }
+  .header_text{
+    display: none;
+  }
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+  .quiz{
+    display: none;
+  }
+  .wrapper{
+   width: 100%;
+   justify-content: center;
+   gap: 5rem;
+
+  }
+  .showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-evenly;
+  }
+  .question{
+    font-size: 1.2rem;
+    margin: none;
+    min-width: 300px;
+    border-bottom: #fff 3px solid;
+    letter-spacing: 0.5px;
+  }
+  .card{
+    box-shadow: none;
+    margin: none;
+    width: 30px;
+    min-width: 380px;
+    min-height: 300px;
+    justify-content: space-evenly;
+  }
+  .item{
+    font-size: 1rem;
+    background: #f0db4f;
+    color: #333
+  }
+  .list{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
 }
