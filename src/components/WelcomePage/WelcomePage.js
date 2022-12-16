@@ -20,7 +20,7 @@ const WelcomePage = (props) => {
               Well... you have a chance to prove it!{" "}
             </h3>
             <p className={classes.text}>
-              The test contains 28 questions and there is no time limit. The
+              The test contains 27 questions and there is no time limit. The
               test is not official, it's just a nice way to see how much you
               know, or don't know, about JavaScript.
             </p>

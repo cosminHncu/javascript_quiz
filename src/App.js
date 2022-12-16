@@ -27,17 +27,6 @@ const App = () => {
       answers: [`<js>`, `<javascript>`, `<script>`, `<scripting>`],
     },
     {
-      question: `What is the correct JavaScript syntax to change the content of the HTML element below?
-                  <p id="demo">This is a demonstration.</p>`,
-      correctAnswer: `document.getElementById("demo").innerHTML = "Hello World!";`,
-      answers: [
-        `document.getElementByName("p").innerHTML = "Hello World!";`,
-        `document.getElement("p").innerHTML = "Hello World!";`,
-        `#demo.innerHTML = "Hello World!";`,
-        `document.getElementById("demo").innerHTML = "Hello World!";`,
-      ],
-    },
-    {
       question: `Where is the correct place to insert a JavaScript?`,
       correctAnswer: `Both <head> and <body>`,
       answers: [
