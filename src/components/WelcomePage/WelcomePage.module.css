@@ -115,9 +115,12 @@ button:active:disabled {
   align-items: center;
  }
  .text{
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 1.5rem;
   width: 100%;
   text-align: justify;
+ }
+ .button{
+  padding: 0.5rem 1rem; 
  }
 }
