@@ -1,11 +1,4 @@
-import Container from "./components/UI/Container/Container";
-import WelcomePage from "./components/WelcomePage/WelcomePage";
-import Quiz from "./components/Quiz/Quiz";
-import txt from "./components/trial.txt";
-import React, { useState, useEffect } from "react";
-const App = () => {
-  const [startQuiz, setStartQuiz] = useState(false);
-  const rawList = [
+[
     {
       question: `Is JavaScript case-sensitive?`,
       correctAnswer: `True`,
@@ -26,7 +19,26 @@ const App = () => {
       correctAnswer: `<script>`,
       answers: [`<js>`, `<javascript>`, `<script>`, `<scripting>`],
     },
-
+    {
+      question: `What is the correct JavaScript syntax to change the content of the HTML element below?
+                  <p id="demo">This is a demonstration.</p>`,
+      correctAnswer: `document.getElementById("demo").innerHTML = "Hello World!";`,
+      answers: [
+        `document.getElementByName("p").innerHTML = "Hello World!";`,
+        `document.getElement("p").innerHTML = "Hello World!";`,
+        `#demo.innerHTML = "Hello World!";`,
+        `document.getElementById("demo").innerHTML = "Hello World!";`,
+      ],
+    },
+    {
+      question: `Where is the correct place to insert a JavaScript?`,
+      correctAnswer: `Both <head> and <body>`,
+      answers: [
+        `The <body> section`,
+        `The <head> section`,
+        `Both <head> and <body>`,
+      ],
+    },
     {
       question: `What is the correct syntax for referring to an external script called "ikj.js"?`,
       correctAnswer: `<script src="ikj.js">`,
@@ -101,6 +113,18 @@ const App = () => {
         `<!--This is a comment-->`,
         `'This is a comment`,
         `//This is a comment`,
+      ],
+    },
+    {
+      question: `How to insert a comment that has more than one line?`,
+      correctAnswer: `/*This comment has more than one line*/`,
+      answers: [
+        `<!--This comment has
+        more than one line-->`,
+        `/*This comment has
+        more than one line*/`,
+        `//This comment has
+        more than one line//`,
       ],
     },
     {
@@ -198,21 +222,3 @@ const App = () => {
       ],
     },
   ];
-  const startQ = (status) => setStartQuiz(true);
-
-  const list = rawList.map((pack) => {
-    pack.id = Math.random() * 10 + 1;
-    return pack;
-  });
-  return (
-    <Container>
-      {startQuiz === true ? (
-        <Quiz list={rawList}></Quiz>
-      ) : (
-        <WelcomePage onSaveStartQ={startQ} />
-      )}
-    </Container>
-  );
-};
-
-export default App;

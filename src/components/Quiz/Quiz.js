@@ -10,7 +10,6 @@ const Quiz = ({ list }) => {
   const [saveAnswer, setSaveAnswer] = useState(null);
   const [results, setResults] = useState([]);
   const [quizDone, setQuizDone] = useState(false);
-  //const [toRestart, setToRestart] = useState(false);
 
   const handleButton = (e) => {
     let counter = selectedQuestion + 1;
@@ -72,13 +71,6 @@ const Quiz = ({ list }) => {
     </div>
   );
   return (
-    //<>
-    //  {quizDone ? (
-    //    <FinalPage onRestart={restart} results={results} />
-    //  ) : (
-    //    renderQuiz()
-    //  )}
-    //</>
     <>
       {!quizDone ? (
         renderQuiz()

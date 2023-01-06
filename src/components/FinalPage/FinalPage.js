@@ -13,6 +13,7 @@ const Number = ({ n }) => {
 };
 
 const FinalPage = ({ results, onRestart }) => {
+  console.log(results);
   const finalResults = results.filter((set) => set[0] === set[1]);
   const perc = Math.round((finalResults.length / results.length) * 100);
   const message = `You ${
@@ -21,7 +22,7 @@ const FinalPage = ({ results, onRestart }) => {
 
   const handleRestart = () => onRestart();
 
-  return (
+  const renderFinalPage = () => (
     <div className={classes.wrapper}>
       <h2 className={classes.final_header}>{message}</h2>
       <div className={classes.header}>
@@ -38,6 +39,8 @@ const FinalPage = ({ results, onRestart }) => {
       <img alt="final" className={classes.final} src={final} />
     </div>
   );
+
+  return <>{renderFinalPage()}</>;
 };
 
 export default FinalPage;
