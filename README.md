@@ -13,9 +13,9 @@ The UI is designed by me.
 Stack:
 - React;
 
-link: https://cosminhncu.github.io/javascript_quiz/
+Link: https://cosminhncu.github.io/javascript_quiz/
 
-The questions and answers are imported from :
+The questions and answers are curated from :
 - https://www.w3schools.com/js/js_quiz.asp;
 - https://www.javatpoint.com/javascript-quiz;
 - https://ydkjs-exercises.com/this-object-prototypes;
