@@ -1,11 +1,11 @@
 import classes from "./WelcomePage.module.css";
 import logo from "../JavaScript-logo.png";
 import React, { useState } from "react";
-const WelcomePage = (props) => {
+const WelcomePage = ({ onSaveStartQ }) => {
   const [readyPlay, setReadyPlay] = useState(false);
   const handelStartQuiz = () => {
     setReadyPlay(true);
-    props.onSaveStartQ(readyPlay);
+    onSaveStartQ(readyPlay);
   };
   const renderContent = () => {
     return (
@@ -17,7 +17,7 @@ const WelcomePage = (props) => {
         <div className={classes.info}>
           <div className={classes.info_wrapper}>
             <h3 className={classes.h_text}>
-              Well... you have a chance to prove it!{" "}
+              Well... you have a chance to prove it!
             </h3>
             <p className={classes.text}>
               The test contains 25 questions and there is no time limit. The

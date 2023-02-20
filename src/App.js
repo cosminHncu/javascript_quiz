@@ -1,8 +1,7 @@
 import Container from "./components/UI/Container/Container";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import Quiz from "./components/Quiz/Quiz";
-import txt from "./components/trial.txt";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 const App = () => {
   const [startQuiz, setStartQuiz] = useState(false);
   const rawList = [
@@ -207,7 +206,7 @@ const App = () => {
   return (
     <Container>
       {startQuiz === true ? (
-        <Quiz list={rawList}></Quiz>
+        <Quiz list={list}></Quiz>
       ) : (
         <WelcomePage onSaveStartQ={startQ} />
       )}

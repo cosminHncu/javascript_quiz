@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -6,39 +6,39 @@
   align-items: center;
   flex-direction: column;
 }
-.final{
+.final {
   width: 450px;
   height: 450px;
 }
 
-.final_header{
+.final_header {
   font-size: 2.6rem;
   color: #333;
   border-bottom: 2px solid #f4f4f4;
   padding: 1rem;
 }
-.final_text{
+.final_text {
   color: #333;
   background: #f4f4f4;
   padding: 2.2rem;
   border-radius: 15px;
 }
 
-.header{
+.header {
   display: flex;
   height: 20%;
   gap: 5rem;
   justify-content: center;
   align-items: center;
 }
-.percentage{
+.percentage {
   font-size: 5.5rem;
   color: #333;
   color: #f0db4f;
   display: flex;
   width: 200px;
 }
-.restart{
+.restart {
   background: #f4f4f4;
   font-size: 1.3rem;
   color: #f0db4f;
@@ -47,42 +47,41 @@
   padding: 0.8rem;
   border-radius: 25px;
   cursor: pointer;
- }
-  
+}
+
 .restart:hover {
-   background: #f0db4f;
-   color: #f4f4f4;
-   transition: all 0.1s ease-in-out;
-  }
+  background: #f0db4f;
+  color: #f4f4f4;
+  transition: all 0.1s ease-in-out;
+}
 @media (max-width: 480px) {
-  .wrapper{
+  .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .restart{
+  .restart {
     margin-top: 5rem;
   }
-  .final_header{
+  .final_header {
     font-size: 2rem;
     text-align: center;
   }
-  .header{
+  .header {
     flex-direction: column-reverse;
     gap: 2rem;
     max-height: 700px;
-
   }
-  .percentage{
+  .percentage {
     font-size: 4rem;
     text-align: center;
     margin-left: auto;
     height: 30%;
   }
-  .final_text{
-    padding: 1rem;
+  .final_text {
+    padding: 0.7rem;
   }
   .final {
     width: 350px;
-    }
+  }
 }
